@@ -10,4 +10,5 @@ class AI():
         self.gesture = None
         super().__init__()
 
-        
+    def set_gesture(self):
+        pass
