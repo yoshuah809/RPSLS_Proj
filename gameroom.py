@@ -1,7 +1,7 @@
 ## This is going to be the GameRoom
 from player import Player
 from human import Human
-from ai import AI
+from AI import AI
 
 
 class Gameroom():
