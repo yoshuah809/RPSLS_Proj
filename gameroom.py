@@ -10,9 +10,13 @@ class Gameroom():
         self.computer = AI()
 
     def display_welcome():
-        pass
+        print('welcom to Rock, Paper, Scissors, Lizard, Spock, or RPSLS for short!')
+        
 
     def display_rules():
+        pass
+
+    def select_game_mode():
         pass
 
     def pick_gesture():
