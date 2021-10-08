@@ -1,5 +1,5 @@
 from player import Player
-class Ai(Player):
+class AI(Player):
 
     def __init__(self):
         self.name = "Artificial Human"
