@@ -1,5 +1,8 @@
 from player import Player
 class human(Player):
     def __init__(self):
-        self.name = None
-        self.gesture = None
+        super().__init__()
+
+    def set_name(self):
+        name= input('please enter your name')
+        print(self.name)
