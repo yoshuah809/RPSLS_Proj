@@ -6,14 +6,16 @@ from AI import AI
 
 class Gameroom():
     def __init__(self):
-        self.player = Human()
-        self.computer = AI()
+        # self.player = Human()
+        # self.computer = AI()
+        self.display_welcome()
+        self.display_rules()
 
-    def display_welcome():
-        print('welcom to Rock, Paper, Scissors, Lizard, Spock, or RPSLS for short!')
+    def display_welcome(self):
+        print('Welcome to Rock, Paper, Scissors, Lizard, Spock, or RPSLS for short!')
         input('press the enter key to continue.')
 
-    def display_rules():
+    def display_rules(self):
         print ('I will now explain the rules of RPSLS.')
         print('you will be able to choose a one or two player game')
         print('you will have the ability to choose one of the five gestures.')
