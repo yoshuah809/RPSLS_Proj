@@ -1,12 +1,8 @@
 from random import Random
 from player import Player
-<<<<<<< Updated upstream
-class AI(Player):
 
-=======
 
 class AI(Player):
->>>>>>> Stashed changes
     def __init__(self):
         self.name = "Artificial Human"
         self.gesture = None
