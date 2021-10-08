@@ -1,0 +1,17 @@
+*************** Rock Paper Scissors Lizzard and Spock ********************************
+
+Game Rules:
+1. Say hello (welcome Player)
+2. Display rules, how it worrks
+3. Let user select Game Mode and
+4. Display options to players
+5. Pick a Gesture from list  ********************************
+    Second Player / AI
+6. Compare Gesture 
+   a- Same gesture - no winner
+   b- Declare winner of round
+   c- Give winner a point
+7. Keep playing rounds until a winner is declared 
+8. Declare Winner
+
+
