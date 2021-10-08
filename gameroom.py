@@ -1,5 +1,4 @@
 ## This is going to be the GameRoom
-from typing_extensions import ParamSpecKwargs
 from player import Player
 
 class Gameroom():
