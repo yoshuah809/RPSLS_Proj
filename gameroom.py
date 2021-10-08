@@ -1,10 +1,13 @@
 ## This is going to be the GameRoom
 from player import Player
+from human import Human
+from ai import AI
+
 
 class Gameroom():
     def __init__(self):
-        self.player = Player()
-        self.computer = Player()
+        self.player = Human()
+        self.computer = AI()
 
     def display_welcome():
         pass
