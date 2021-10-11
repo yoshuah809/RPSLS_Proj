@@ -4,9 +4,9 @@ from player import Player
 
 class AI(Player):
     def __init__(self):
+        super().__init__()
         self.name = "Artificial Human"
         self.gesture = None
-        super().__init__()
 
     def set_gesture(self):
         gesture_selection = random.randint(0,4)
