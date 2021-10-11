@@ -9,7 +9,6 @@ class AI(Player):
         super().__init__()
 
     def set_gesture(self):
-        # self.gesture = self.gesture_list[randint(0,5)]
         gesture_selection = random.randint(0,4)
         if gesture_selection == 0:
             self.gesture = self.gesture_list[0]

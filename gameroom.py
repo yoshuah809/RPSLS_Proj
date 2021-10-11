@@ -79,21 +79,26 @@ class Gameroom():
             input('Please press enter to choose your gesture')
             self.player_one.set_gesture()
             self.player_two.set_gesture()
-            if self.player_one.gesture == 'rock':
-                if self.player_two.gesture == 'rock':
+            if self.player_one.gesture == 'Rock':
+                if self.player_two.gesture == 'Rock':
                     print('This round is a tie!')
-                elif self.player_two.gesture =='paper':
+                elif self.player_two.gesture =='Paper':
                     print(f'paper covers rock,{self.player_two.name} wins this round!')
                     self.player_two.score += 1
-                elif self.player_two.gesture == 'scissors':
+                elif self.player_two.gesture == 'Scissors':
                     print(f'rock smashes scissors, {self.player_one.name} wins this round')
-            elif self.player_one.gesture == 'paper':
+                    self.player_one.score += 1
+                elif self.player_two.gesture == 'Lizard':
+                    print (f'rock smashes lizard, {self.player_one.name} wins this round')
+                else:
+                    print (f'spock vaporizes rock, {self.player_two.name} wins this round')
+            elif self.player_one.gesture == 'Paper':
                 pass
-            elif self.player_one.gesture == 'scissors':
+            elif self.player_one.gesture == 'Scissors':
                 pass
-            elif self.player_one.gesture == "lizard":
+            elif self.player_one.gesture == "Lizard":
                 pass
-            elif self.player_one.gesture == 'spock':
+            elif self.player_one.gesture == 'Spock':
                 pass
             else:
                 print('That is not an option, please try again')    

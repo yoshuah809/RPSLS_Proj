@@ -9,7 +9,7 @@ class Human(Player):
         self.name = input('Please enter your name: ')
         print(self.name)
     def set_gesture(self):
-        choose_gesture = input('which gesture would you like to choose?' + '\n' + 'press 1 for rock'+ '\n' + 'press 2 for paper' + '\n' + 'press 3 for scissors' + '\n' + 'press 4 for lizard' + '\n' + 'press 5 for spock')
+        choose_gesture = input('which gesture would you like to choose?' + '\n' + 'press 1 for rock'+ '\n' + 'press 2 for paper' + '\n' + 'press 3 for scissors' + '\n' + 'press 4 for lizard' + '\n' + 'press 5 for spock' + '\n')
         gesture_selection = int(choose_gesture)
         # for gesture in range(len(self.player_one.gesture_list)):
         #     print(f'Please select {gesture} for {self.player_one.gesture_list[gesture]}')
