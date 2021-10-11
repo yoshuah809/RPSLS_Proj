@@ -6,13 +6,16 @@ from AI import AI
 
 class Gameroom():
     def __init__(self):
+
         self.display_welcome()
         self.display_rules()
         self.select_game_mode()
+        self.play_round()
          # Here the Player One Select the gesture
         self.player_one.gesture = self.player_one.gesture_list[self.display_options()] 
         # From here the machine takes the turn 
         #print(self.player_one.gesture) 
+
 
     def display_welcome(self):
         print('Welcome to Rock, Paper, Scissors, Lizard, Spock, or RPSLS for short!')
@@ -43,13 +46,16 @@ class Gameroom():
         if self.selected_option == 1:  #user has selected 2 Players
            self.player_one = Human()
            self.player_two = Human()
+
            print("You have selected Multiplayer Mode, Choose your gesture below...")
         
         elif self.selected_option == 2:    #user has selected Single mode
+
             self.player_one = Human()
             self.player_two = AI()
             print("You have selected Single player Mode")
         else:
+
             print("Plese select a Valid option, Press Enter to continue") 
             input('press the enter key to continue.') 
    
@@ -59,10 +65,38 @@ class Gameroom():
         for gesture in range(len(self.player_one.gesture_list)):
             print(f'Please select {gesture} for {self.player_one.gesture_list[gesture]}')
 
+
         return_gesture = int(input())    
         return return_gesture  
 
     def compare_gesture():
         pass
-    def pick_gesture():
-        pass
+    
+    def play_round(self):
+        this_round = 0
+        while this_round <= 5:
+            print(f'You are now starting round {this_round}')
+            input('Please press enter to choose your gesture')
+            self.player_one.set_gesture()
+            self.player_two.set_gesture()
+            if self.player_one.gesture == 'rock':
+                if self.player_two.gesture == 'rock':
+                    print('This round is a tie!')
+                elif self.player_two.gesture =='paper':
+                    print(f'paper covers rock,{self.player_two.name} wins this round!')
+                    self.player_two.score += 1
+                elif self.player_two.gesture == 'scissors':
+                    print(f'rock smashes scissors, {self.player_one.name} wins this round')
+            elif self.player_one.gesture == 'paper':
+                pass
+            elif self.player_one.gesture == 'scissors':
+                pass
+            elif self.player_one.gesture == "lizard":
+                pass
+            elif self.player_one.gesture == 'spock':
+                pass
+            else:
+                print('That is not an option, please try again')    
+
+            this_round += 1
+
