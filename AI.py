@@ -1,4 +1,4 @@
-from random import Random
+import random
 from player import Player
 
 
@@ -9,7 +9,8 @@ class AI(Player):
         super().__init__()
 
     def set_gesture(self):
-        gesture_selection = Random.randint(0,4)
+        # self.gesture = self.gesture_list[randint(0,5)]
+        gesture_selection = random.randint(0,4)
         if gesture_selection == 0:
             self.gesture = self.gesture_list[0]
         if gesture_selection == 1:
