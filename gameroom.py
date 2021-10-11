@@ -108,22 +108,65 @@ class Gameroom():
                     self.player_two.score += 1
                 elif self.player_two.gesture == 'Lizard':
                     print(f'lizard eats paper, {self.player_two.name} wins this round!')
+                    self.player_two.score += 1
+                else:
+                    print(f'paper disproves spock, {self.player_one.name} wins this round!')
+                    self.player_one.score += 1
 
 
 
 
             elif self.player_one.gesture == 'Scissors':
-                pass
+                if self.player_two.gesture == 'Scissors':
+                    print('this round is a tie!')
+                elif self.player_two.gesture == 'Rock':
+                    print(f'rock smashes scissors {self.player_two.name} wins this round!')
+                    self.player_two.score += 1
+                elif self.player_two.gesture == 'Paper':
+                    print(f'scissors cut paper {self.player_one.name} wins this round!')
+                    self.player_one.score += 1
+                elif self.player_two.gesture == 'Lizard':
+                    print(f'scissors decapitates lizard {self.player_one.name} wins this round')
+                    self.player_one.score += 1
+                else:
+                    print(f'spock smashes scissors, {self.player_two.name} wins this round!')
+                    self.player_two.score += 1
 
 
 
             elif self.player_one.gesture == "Lizard":
-                pass
+                if self.player_two.gesture == 'Lizard':
+                    print('this round is a tie!')
+                elif self.player_two.gesture == 'Rock':
+                    print(f'rock smashes lizard {self.player_two.name} wins this round!')
+                    self.player_two.score += 1
+                elif self.player_two.gesture == 'Paper':
+                    print (f'lizard eats paper, {self.player_one.name} wins this round!')
+                    self.player_one.score += 1
+                elif self.player_two.gesture == 'Scissors':
+                    print (f'scissors decapitates lizard, {self.player_two.name} wins this round!')
+                    self.player_two.score += 1
+                else:
+                    print(f'lizard poisons spock, {self.player_one.name} wins this round!')
+                    self.player_one.score += 1
 
 
 
             elif self.player_one.gesture == 'Spock':
-                pass
+                if self.player_two.gesture == 'Spock':
+                    print('this round is a tie!')
+                elif self.player_two.gesture == 'Rock':
+                    print(f'spock vaporizes rock, {self.player_one.name} wins this round')
+                    self.player_one.score += 1
+                elif self.player_two.gesture == 'Paper':
+                    print(f'paper disproves spock, {self.player_two.name} wins this round!')
+                    self.player_two.score += 1
+                elif self.player_two.gesture == 'Scissors':
+                    print(f'spock smashes scissors, {self.player_one.name} wins thi round!')
+                    self.player_one.score += 1
+                else:
+                    print(f'lizard poisons spock, {self.player_two.name} wins this round')
+                    self.player_two.score += 1
 
 
 
