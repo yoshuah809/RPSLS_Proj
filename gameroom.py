@@ -12,7 +12,7 @@ class Gameroom():
         self.select_game_mode()
         self.play_round()
          # Here the Player One Select the gesture
-        self.player_one.gesture = self.player_one.gesture_list[self.display_options()] 
+        # self.player_one.gesture = self.player_one.gesture_list[self.display_options()] 
         # From here the machine takes the turn 
         #print(self.player_one.gesture) 
 
@@ -73,7 +73,7 @@ class Gameroom():
         pass
     
     def play_round(self):
-        this_round = 0
+        this_round = 1
         while this_round <= 5:
             print(f'You are now starting round {this_round}')
             input('Please press enter to choose your gesture')
@@ -90,16 +90,43 @@ class Gameroom():
                     self.player_one.score += 1
                 elif self.player_two.gesture == 'Lizard':
                     print (f'rock smashes lizard, {self.player_one.name} wins this round')
+                    self.player_one.score += 1
                 else:
                     print (f'spock vaporizes rock, {self.player_two.name} wins this round')
+                    self.player_two.score += 1
+
+
+
             elif self.player_one.gesture == 'Paper':
-                pass
+                if self.player_two.gesture == 'Paper':
+                    print('this round is a tie!')
+                elif self.player_two.gesture == 'Rock':
+                    print (f'paper covers rock {self.player_one.name} wins this round!')
+                    self.player_one.score += 1
+                elif self.player_two.gesture == 'Scissors':
+                    print(f'scissors cuts paper, {self.player_two.name} wins this round!')
+                    self.player_two.score += 1
+                elif self.player_two.gesture == 'Lizard':
+                    print(f'lizard eats paper, {self.player_two.name} wins this round!')
+
+
+
+
             elif self.player_one.gesture == 'Scissors':
                 pass
+
+
+
             elif self.player_one.gesture == "Lizard":
                 pass
+
+
+
             elif self.player_one.gesture == 'Spock':
                 pass
+
+
+
             else:
                 print('That is not an option, please try again')    
 

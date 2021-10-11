@@ -2,14 +2,14 @@ from player import Player
 
 class Human(Player):
     def __init__(self):
-        super().__init__()
         self.name = self.set_name()
+        super().__init__()
 
     def set_name(self):
         self.name = input('Please enter your name: ')
         print(self.name)
     def set_gesture(self):
-        choose_gesture = input('which gesture would you like to choose?' + '\n' + 'press 1 for rock'+ '\n' + 'press 2 for paper' + '\n' + 'press 3 for scissors' + '\n' + 'press 4 for lizard' + '\n' + 'press 5 for spock' + '\n')
+        choose_gesture = input('which gesture would you like to choose?' + '\n' + 'press 1 for rock'+ '\n' + 'press 2 for paper' + '\n' + 'press 3 for scissors' + '\n' + 'press 4 for lizard' + '\n' + 'press 5 for spock' + '\n' + ' ')
         gesture_selection = int(choose_gesture)
         # for gesture in range(len(self.player_one.gesture_list)):
         #     print(f'Please select {gesture} for {self.player_one.gesture_list[gesture]}')
