@@ -171,7 +171,8 @@ class Gameroom():
 
 
             else:
-                print('That is not an option, please try again')    
+                print('Stop trying to break my game!')    
 
             this_round += 1
 
+          
