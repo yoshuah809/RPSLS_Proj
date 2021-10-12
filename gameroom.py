@@ -75,6 +75,23 @@ class Gameroom():
     def play_round(self):
         this_round = 1
         while this_round <= 5:
+            if self.player_one.score > 2:
+                print(f"The Winner is {self.player_one.name}")
+                break
+            elif self.player_two.score > 2:
+                print(f"The Winer is {self.player_two.name}")
+                break
+            elif this_round == 5 and self.player_one.score == self.player_two.score:
+                print("This game is a tie, next score wins!")
+                this_round = 4
+                
+            elif this_round == 5 and self.player_one.score > self.player_two.score:
+                print(f'The winner is {self.player_one.name}')
+                break
+            elif this_round == 5 and self.player_one.score < self.player_two.score:
+                print (f'The winner is {self.player_two.name}')
+                break
+
             print(f'You are now starting round {this_round}')
             input('Please press enter to choose your gesture')
             self.player_one.set_gesture()
@@ -175,4 +192,5 @@ class Gameroom():
 
             this_round += 1
 
-          
+
+            
